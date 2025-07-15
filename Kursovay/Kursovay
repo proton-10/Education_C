@@ -1,0 +1,12 @@
+CC = gcc
+
+all: kursovay.exe
+
+kursovay.exe: main.o temp_functions_1.o temp_functions_2.o menu.o grafik.o
+	gcc -o kursovay.exe main.o temp_functions_1.o temp_functions_2.o menu.o grafik.o
+
+%.o: %.c temp_function.h
+	$(CC) -c $< -o $@
+
+clean:
+	del *.o kursovay.exe
