@@ -302,7 +302,7 @@ int8_t MaxYear(t_sensor info[], uint32_t size, uint16_t year)
 // ф-ция поиска минимума года
 int8_t MinYear(t_sensor info[], uint32_t size, uint16_t year)
 {
-	int8_t min_t = 0;
+	int8_t min_t = 127;
 	for (uint32_t i = 0; i < size; i++)
 	{
 		// если год нужный, а температура больше максимума
